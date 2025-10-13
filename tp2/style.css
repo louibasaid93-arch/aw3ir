@@ -1,0 +1,94 @@
+
+/* Style de base pour les labels et inputs */
+label {
+  width: 150px;
+  display: inline-block;
+}
+
+input {
+  width: 250px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+/* Style du formulaire */
+form {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+/* Style du bouton principal */
+.btn-primary {
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid;
+  font-size: 1em;
+}
+
+/* Formulaire non valide - bouton grisé */
+form:invalid input[type="submit"] {
+  background-color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
+/* Champ non valide - bordure rouge */
+input:invalid {
+  border-color: red;
+}
+
+/* Cacher l'emoji pour les champs invalides */
+input:invalid + .icon-ok {
+  display: none;
+}
+
+/* Afficher l'emoji pour les champs valides */
+input:valid + .icon-ok {
+  display: inline-block;
+  color: green;
+  margin-left: 10px;
+}
+
+/* Style pour les paragraphes contenant les champs */
+p {
+  margin-bottom: 15px;
+}
+/* Styles pour la page action.html */
+a.btn-primary {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+div {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+    margin-top: 20px;
+}
+
+div p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#address, #email {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+#address:hover, #email:hover {
+    color: #0a58ca;
+}
