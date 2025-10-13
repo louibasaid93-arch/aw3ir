@@ -1,41 +1,87 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP1</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="main.js"></script>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Louiba Said</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP1
-  </nav>
-  <h1>TP 1</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
+  <header>
+    <h1>Louiba Said</h1>
+    <p>Étudiant en Ingénierie et Innovation des Réseaux Informatiques</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil (CV)</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2><a href="experiences/index.html">Expériences</a></h2>
+  <main>
+    <section id="profil">
+      <h2>Profil</h2>
+      <p>Actuellement en Master 2 Ingénierie et Innovation des Réseaux Informatiques à l’Université Sorbonne Paris Nord, je suis à la recherche d’un stage à partir d’avril 2026 dans les domaines du <strong>DevOps</strong>, du <strong>Cloud</strong> et de l’<strong>ingénierie réseaux</strong>.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Téléphone :</strong> 06 36 20 23 85</p>
+      <p><strong>Email :</strong> <a href="mailto:louibasaid9@gmail.com">louibasaid9@gmail.com</a></p>
+      <p><strong>Adresse :</strong> Levallois-Perret, Nanterre, 92300</p>
+      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/said-louiba-63b83629b" target="_blank">said-louiba-63b83629b</a></p>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <ul>
+        <li><strong>Langages de programmation :</strong> Java, C++, Python, Matlab</li>
+        <li><strong>Réseaux :</strong> DHCP, DNS, FTP, HTTP/S, SSH, SNMP</li>
+        <li><strong>Sécurité :</strong> iptables, UFW, ACL</li>
+        <li><strong>Cloud & DevOps :</strong> AWS (EC2, S3, VPC, IAM, RDS), Docker, Kubernetes, Terraform, GitHub</li>
+        <li><strong>Linux :</strong> Debian, Ubuntu</li>
+      </ul>
+    </section>
+
+    <section id="formations">
+      <h2>Formations</h2>
+      <ul>
+        <li><strong>Master 1 & 2 :</strong> Ingénierie et Innovation des Réseaux Informatiques – Université Sorbonne Paris Nord (2024 - en cours)</li>
+        <li><strong>Licence Sciences pour l’Ingénieur :</strong> Université Sorbonne Paris Nord (2022 - 2024)</li>
+        <li><strong>Licence 3 en Automatique :</strong> Université Abderrahmane Mira, Béjaïa, Algérie (2019 - 2022)</li>
+      </ul>
+      <a href="formations.html" class="btn">→ Voir les détails des formations</a>
+    </section>
+
+    <section id="experiences">
+      <h2>Expériences & Projets</h2>
+      <ul>
+        <li><strong>Projet Cloud AWS avec Terraform (Mars–Avril 2025) :</strong> création d’une infrastructure Cloud AWS automatisée (VPC, EC2, RDS, sécurité, IaC).</li>
+        <li><strong>Projet Réseau Virtuel Debian (Oct. 2024–Fév. 2025) :</strong> mise en place d’un réseau complet avec DNS, DHCP, Apache, FTP, Postfix, supervision via Nagios.</li>
+      </ul>
+      <a href="experiences.html" class="btn">→ Voir les détails des expériences</a>
+    </section>
+
+    <section id="langues">
+      <h2>Langues</h2>
+      <ul>
+        <li>Français : Courant</li>
+        <li>Anglais : Intermédiaire</li>
+        <li>Arabe : Courant</li>
+        <li>Kabyle : Langue maternelle</li>
+      </ul>
+    </section>
+
+    <section id="interets">
+      <h2>Centres d’intérêt</h2>
+      <p>Passion pour le football et la randonnée. Esprit d’équipe, autonomie et responsabilité.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Louiba Said - Tous droits réservés.</p>
+  </footer>
 </body>
-
 </html>

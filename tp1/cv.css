@@ -1,0 +1,41 @@
+
+/* Couleur de fond */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Tables */
+table {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Lignes impaires en gris clair */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Liens */
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkorange;
+    text-decoration: underline;
+}
+
+/* Changement de fond sur petit écran */
+@media only screen and (max-width: 600px) {
+    body {
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    }
+}
