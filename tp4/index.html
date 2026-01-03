@@ -1,39 +1,139 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP4</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>TP4 - Formulaire + Géolocalisation</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
     <style>
         body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
+            background: #f5f7fa;
+        }
+
+        h1 {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+        }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+        }
+
+        button[type=submit] {
+            padding: 10px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        #myForm {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+        }
+
+        #map {
+            margin-top: 20px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
     </style>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script defer src="js/form-validation.js"></script>
+    <script defer src="js/gps.js"></script>
 </head>
-
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP4
-    </nav>
-    <h1>TP4</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
-</body>
 
+<div class="container mt-5">
+    <div class="text-center mb-3">
+        <img src="galilee.png" width="100" />
+    </div>
+
+    <h1 class="text-center mb-4">Formulaire d'inscription</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+            <form id="myForm" class="row g-3">
+
+                <div class="col-12">
+                    <label class="form-label">Nom</label>
+                    <input type="text" id="lastname" class="form-control" minlength="5" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Prénom</label>
+                    <input type="text" id="firstname" class="form-control" minlength="5" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Date de naissance</label>
+                    <input type="date" id="birthday" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Adresse postale</label>
+                    <div class="input-group">
+                        <input type="text" id="address" class="form-control" minlength="5" required>
+                        <button class="btn btn-outline-primary" type="button" id="btnGeo">📍 GPS</button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary" type="submit">Valider</button>
+                </div>
+
+            </form>
+
+            <!-- Zone d'affichage de la carte -->
+            <div id="map"></div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Bootstrap existant -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Validation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">...</div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    OK
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
